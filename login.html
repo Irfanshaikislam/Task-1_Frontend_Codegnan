@@ -3,16 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Login Page</title>
+    <style>
+        body{
+            background-image: linear-gradient( 89.9deg,  rgba(238,3,3,1) 0%, rgba(0,22,145,1) 99.8% );
+            min-height: 100vh;
+            background-size: contain;
+            font-family: sans-serif;
+        }
+        .form-container{
+            background-color:black;
+            color:grey;
+            width:40%;
+            text-align: center;
+            margin:auto;
+            margin-top: 5%;
+            padding: 3% 10px;
+        }
+        .form-container h1{
+            color:white;
+        }
+        .form-field{
+            margin:25px 0px;
+        }
+        .form-field input{
+                padding:15px;
+                border-radius:25px;
+                width:50%;
+                border:1px solid rgb(6, 6, 246);
+                background-color: inherit;
+                font-size: 15px;
+        }
+        .form-field input::placeholder{
+            text-align: center;
+        }
+
+        .form-field button{
+                   padding: 20px;
+                   border-radius: 25px;
+                   color:gray;
+                   width:25%;
+                   background-color: inherit;
+                   border:1px solid rgb(16, 167, 16)
+        }
+        .form-field i{
+            margin:0px 10px;
+            color: white;
+            font-size: 1em;
+        }
+    </style>
 </head>
 <body>
-    <form action="bio.html">
-        <p><label for="name">Username:</label>
-            <input type="email" name="user" id="name" placeholder="Enter username" required /></p>
-            <p><label for="password">Password:</label>
-            <input type="password" id="password" placeholder="Enter password" /></p>
-            <button type="submit">Login</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <form action="bio.html" class="form-container">
+        <h1 id="form-Heading" class="form-field">
+            LOGIN
+        </h1>
+        <P id="form-matter" class="form-field">
+            Please enter your login and password
+        </P>
+        <!-- while using input's always use name,id.Because
+         (i)name will help with backend in flask
+         (ii)id will help with functinality in js -->
+        <div id="form-user" class="form-field">
+            <!-- <label for="name">Username:</label> -->
+            <input type="email" name="useremail" id="name" placeholder="Username" required />
+        </div>
+        <div id="form-password" class="form-field">
+            <!-- <label for="password">Password:</label> -->
+            <input type="password" name="userpassword" id="password" placeholder="Password" />
+        </div>
+        <div id="form-forget-password" class="form-field">
             <a href="">forgot Password</a>
+        </div>
+        <div id="form-button" class="form-field">
+            <button type="submit">Login</button>
+        </div>
+        <div id="form-icons" class="form-field">
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+        </div>    
     </form>
 </body>
 </html>

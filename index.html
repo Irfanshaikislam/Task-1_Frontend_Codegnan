@@ -4,50 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Page</title>
+    <style>
+        /* *{
+            border: 1px solid red;
+        } */
+        body{
+            margin:0;
+            background-image: linear-gradient( 109.6deg,  rgba(163,213,255,1) 11.3%, rgba(4,137,137,1) 86.7% );
+            min-height: 100vh;
+            background-size:contain;
+            font-family: sans-serif;
+            /* text-align: center; */
+        }
+        .form-container{
+            border: 1px solid black;
+            width:100%;
+            max-width: 700px;
+            max-height:100vh;
+            margin: auto;
+            margin-top:0.2%;
+            margin-bottom: 0.3%;
+            background-color: rgba(255, 255, 255, 0.297);
+        }
+        .form-field{
+            padding:0% 20%;
+            margin:19px 0px;
+            text-align: center;
+        }
+        .form-field hr{
+            color: black;
+        }
+        .form-field input[type="text"],input[type="email"],input[type="password"],input[type="password"]{
+            padding:1.6% 15%;
+            border-radius: 25px;
+            border:1px solid rgb(255, 255, 255);
+            text-align: center;
+            margin-left: 3%;
+        }
+        .form-field .form-cities{
+            padding:1.6% 13%;
+            margin-left: 5%;
+            border-radius: 25px;
+            font-size: 1rem;
+            border:1px solid rgb(255, 255, 255);
+        }
+        .form-field input::placeholder{
+            text-align: center;
+            font-size: 1rem;
+        }
+        .form-field label>textarea{
+            width:100%;
+            height:50px;
+            margin-left: 5%;
+            text-align: justify;
+        }
+        .form-field button{
+            padding:0.9% 10%;
+            margin-top: 10px;
+            margin-left: 10%;
+            width:40%;
+            font-size: 1em;
+            border:1px solid rgb(0, 0, 0);
+            border-radius: 5px;
+            background-color: aquamarine;
+        }
+    </style>
 </head>
 <body>
-    <form action="login.html">
-        <p>
-            <label for="username">Username:</label>
-            <input type="text" id="username" placeholder="Enter Your Name" Required/>
-        </p>
-        <p>
-            <label for="usermail">Email:</label>
-            <input type="email" id="usermail" placeholder="Enter Your Name" Required/>
-        </p>
-        <p>
-            <label for="Password">Password:</label>
-            <input type="password" id="Password" placeholder="Enter Password" Required/>
-        </p>
-        <p>
-            <label for="retype-password">Retype-Password:</label>
-            <input type="password" id="retype-password" placeholder="Retype-password" Required/>
-        </p>
-        <p>
-            <input type="radio" name="Gender" id="Male"/>Male
-            <input type="radio" name="Gender" id="Female"/>Female
-        </p>
-        <p>
-            <input type="checkbox" name="Study" id="Graduate"/>Graduate
-            <input type="checkbox" name="Study" id="Intermediate"/>Intermediate
-            <input type="checkbox" name="Study" id="SSC"/>SSC
-        </p>
-        <p>
-            <select>
+    <form action="login.html" class="form-container">
+        <div class="form-field" id="form-heading">
+             <h1>Student Registration Form</h1>
+             
+        </div>
+        <div id="form-user" class="form-field">
+            <label for="username">
+                <input type="text" id="username" placeholder="Enter Your Name" Required/>
+            </label>   
+        </div>
+        <div class="form-field" id="form-mail">
+            <label for="usermail">
+                <input type="email" id="usermail" placeholder="Enter Your Email" Required/>
+            </label>
+        </div>
+        <div class="form-field" id="form-password">
+            <label for="Password">
+                <input type="password" id="Password" placeholder="Enter Password" Required/>
+            </label>
+        </div>
+        <div class="form-field" id="form-retype">
+            <label for="retype-password">
+                <input type="password" id="retype-password" placeholder="Retype-password" Required/>
+            </label>   
+        </div>
+        <div class="form-field" id="form-gender">
+                <b>Gender: </b><label for="Male">Male
+                    <input type="radio" name="Gender" id="Male"/>
+                </label>
+                <label for="Female">Female
+                    <input type="radio" name="Gender" id="Female"/>
+                </label> 
+        </div>
+        <div class="form-field" id="form-info">
+            <label for="">Education:</label><br/>
+            <label for="Graduate">Graduate<input type="checkbox" name="Study" id="Graduate"/></label>
+            <label for="Intermediate">Intermediate<input type="checkbox" name="Study" id="Intermediate"/></label>
+            <label for="SSC">SSC<input type="checkbox" name="Study" id="SSC"/></label>
+        </div>
+        <div class="form-field">
+            <select class="form-cities" name="city" id="city-selected">
                 <option value="Select City">Select City</option>
                 <option value="Hyderabad">Hyderabad</option>
                 <option value="Vizag">Vizag</option>
                 <option value="Vijayawad">Vijayawad</option>
             </select>
-        </p>
-        <p>
-            <label for="address">Address:</label>
-            <textarea id="address" placeholder="Enter address"></textarea>
-        </p>
-        <p><input type="file" id="Photo"></p>
-        <button type="submit">Submit</button>
-       
+        </div>
+        <div class="form-field" id="form-address">
+            <label for="address">Address:
+                <textarea id="address" placeholder="Enter address"></textarea>
+            </label>
+        </div>
+        <div class="form-field" id="form-file">
+          <label for="Photo"><b>File:</b>
+                <input type="file" id="Photo">
+                <button type="submit">Register</button> 
+            </label>   
+              
+        </div>      
     </form>
-
 </body>
 </html>
